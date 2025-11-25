@@ -1,0 +1,105 @@
+@import "tailwindcss";
+* {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --primaryColor: #00395d;
+  --secondaryColor: #000000;
+  --tertiaryColor: #b6d7a8;
+  --accentColor: #eeeeee;
+}
+/* Using CSS variables for custom classes */
+.primaryBgColor {
+  background-color: var(--primaryColor);
+}
+
+.secondaryBgColor {
+  background-color: var(--secondaryColor);
+}
+
+.tertiaryBgColor {
+  background-color: var(--tertiaryColor);
+}
+
+.accentBgColor {
+  background-color: var(--accentColor);
+}
+.primaryTextColor {
+  color: var(--primaryColor);
+}
+.secondaryTextColor {
+  color: var(--secondaryColor);
+}
+.tertiaryTextColor {
+  color: var(--tertiaryColor);
+}
+.accentTextColor {
+  color: var(--accentColor);
+}
+
+/* Use the custom color variable in Tailwind classes */
+.hover\:primaryTextColor:hover {
+  color: var(--primaryColor);
+}
+.hover\:secondaryTextColor:hover {
+  color: var(--secondaryColor);
+}
+.hover\:tertiaryTextColor:hover {
+  color: var(--tertiaryColor);
+}
+.hover\:accentTextColor:hover {
+  color: var(--accentColor);
+}
+.hover\:tertiaryTextColor:hover {
+  color: var(--tertiaryColor);
+}
+
+.primaryBorderColor {
+  border-color: var(--primaryColor);
+}
+.primaryRingColor {
+  outline: none;
+  box-shadow: var(--primaryColor);
+}
+
+.primaryAccentColor {
+  accent-color: var(--primaryColor);
+}
+
+.inner-glow {
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Hide scrollbar for WebKit and Firefox */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.menu-link {
+  @apply flex items-center justify-between px-4 py-3 rounded-lg cursor-pointer text-white;
+}
+
+/* In your global CSS */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* inverts the icon to white */
+  cursor: pointer;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* inverts the icon to white */
+  cursor: pointer;
+}
