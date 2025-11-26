@@ -137,9 +137,7 @@ const GeneralProfileInfoSection = ({ slug }) => {
 
   const alwaysFields = ["prefix", "suffix", "bloodGroup"];
 
-  const corporateFields = shouldHideForCompany
-    ? ["department"]
-    : ["department", "idNumber"];
+  const corporateFields = shouldHideForCompany ? [] : ["department", "idNumber"];
 
   const normalUserFields = ["companyName"];
 
@@ -162,11 +160,11 @@ const GeneralProfileInfoSection = ({ slug }) => {
   const availableThemeOptions = isMainAdmin
     ? themeOptions
     : themeOptions.filter(
-        (theme) =>
-          theme.value === "dark" ||
-          theme.value === "light" ||
-          user?.themePermission?.includes(theme.value),
-      );
+      (theme) =>
+        theme.value === "dark" ||
+        theme.value === "light" ||
+        user?.themePermission?.includes(theme.value),
+    );
 
   if (loading) return <LoadingLottie />;
 
